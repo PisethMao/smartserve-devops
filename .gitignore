@@ -1,0 +1,12 @@
+.vscode-server/
+.cache/
+.config/
+.docker/
+.ssh/
+snap/
+node_modules/
+target/
+build/
+dist/
+.env
+*.log
