@@ -1,0 +1,22 @@
+services:
+  nginx-svc:
+    image: nginx:trixie-perl
+    container_name: nginx-cont
+    ports:
+      - "3000:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - nextjs-svc
+    networks:
+      - webnet
+  nextjs-svc:
+    image: pisethmao/smartserve-ui:latest
+    container_name: nextjs-cont
+    ports:
+      - "8080:3000"
+    networks:
+      - webnet
+networks:
+  webnet:
+    driver: bridge
