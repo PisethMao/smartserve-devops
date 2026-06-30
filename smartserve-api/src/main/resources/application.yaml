@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: smartserve-api
+  profiles:
+    active: dev
+server:
+  port: 8082
+app:
+  frontend:
+    base-url: http://localhost:3000

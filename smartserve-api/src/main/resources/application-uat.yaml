@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://uat-db-host:5432/smartserve-uat
+    username: postgres
+    password: qwer
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
